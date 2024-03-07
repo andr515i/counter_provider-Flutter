@@ -97,7 +97,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                       IconButton(
                         icon: const Icon(Icons.add),
-                        onPressed: counterProvider.incrementCounter,
+                        onPressed: () {
+                          counterProvider.incrementCounter(context);
+                        },
                       ),
                     ],
                   ),
@@ -106,7 +108,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 const Text('You have pushed the button this many times:'),
                 Text(
                   '${counterProvider.counter}',
-                  style: Theme.of(context).textTheme.headline4,
+                  style: Theme.of(context).textTheme.headlineMedium,
                 ),
               ],
             );
